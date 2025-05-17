@@ -1073,54 +1073,7 @@ def main():
 	]
 	header(colorPallete, "─", banner("NumSolvers",minus=-2), "Azcué", 1.0, "Numerical Numeolvers")
 
-	r=12
-	L=5
-	V = ((r**2) * acos((r-x)/r)-(r-x)*sqrt(2*r*x-x**2))*L-8
-	
-	FalsePosition(V, [0, 1, 4.0])
-	#plot(V,0, (x, 0,4),rendering_kw=[{}, {"linestyle": "--"}])
-
-
-	eq1 = ((1000+(x1*(x2**2))-((x1-1)**3))**(1/3))/x1
-	eq2 = ((((8**3)+((x1**2)/x2))**(1/3))-12)/x2
-	FixedPointSE([eq1,eq2],[3,2])
-
-
-	hours = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
-	population = [2.32, 2.70, 2.72, 3, 3.30, 3.65, 4, 4.5, 5.2, 5.44, 5.90, 6.64, 7.40, 8.3, 8.96]
-	regr = leastSquares(hours, population, model='exp')
-	regr.subs(20)
-
-
-
-	time = [0,3,5,7]
-	temp = [150,120,100,85]
-
-	inter = Newton(time, temp)
-
-
-	target = 95
-	eq = inter.eq - target
-
-	Bisection(eq, [5.0, 5.5, 7.0], maxError=0.00004, solution=False)
-	plot(eq,0, (x, 5,6),rendering_kw=[{}, {"linestyle": "--"}])
-
-	u = 1850
-	m0=160000
-	q=2500
-	g=9.81
-	v = u*ln(m0/(m0-q*x))-g*x
-	n = 6
-	xData = list(np.linspace(0,30,n+1))
-	simpsons38Rule(v, xData)
-
-	R=5
-	L=0.5
-	di = (20*exp(-3*x)-R*y)/L
-
-	y0=0
-	xData = list(np.arange(0.0,0.4,0.02))
-	RungeKutta(xData=xData, y0=y0, eq=di, method="rk4")
+	# Insert code here, from examples
 	
 if __name__ == '__main__':
 	main()

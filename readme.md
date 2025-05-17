@@ -1,7 +1,7 @@
 ### Documentation for Numerical Methods Code
 
 >>The documentation was written by AI, 
->>the code is complately coded by ROdrigo Azcué
+>>the code is complately coded by Rodrigo Azcué
 
 ---
 
